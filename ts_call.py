@@ -37,20 +37,6 @@ def query_api(apiuser,apikey,resource,flags):
       exit(0)
 
 
-def fetch_intel(apiuser,apikey, *args):
-  if args: query = args[0]
-  else: query = ''
-  r = []
-  log.info('Downloading intelligence: \n')
-  INTEL = { 'c2_domain', 'bot_ip' } # filter to itype
-  limit = 3 # Limit number of responses
-  status = "active" 
-  for itype in INTEL:
-    r.append(query_api(apiuser,apikey,'intelligence',
-      '&extend_source=true&value__re=.*{}.*&limit={}&status={}&itype={}'.format(query, limit, status, itype)))
-  return(r)
-
-
 def repcheck(apiuser,apikey, *args):
     response = []
     limit = 200 # Limit number of responses
