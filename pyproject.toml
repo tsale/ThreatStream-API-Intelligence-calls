@@ -2,7 +2,7 @@
 name = "threatstream-intelligence-api-calls"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["@Kostastsale"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
